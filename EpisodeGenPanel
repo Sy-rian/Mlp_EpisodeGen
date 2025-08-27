@@ -1,0 +1,5 @@
+int max1 = 9, min1 = 1;
+int max2 = 26, min2 = 1;
+
+System.out.println("Season #: " + gen.nextInt(max1 - min2 + 1));
+System.out.println("Episode #: " + gen.nextInt(max2 - min2 + 1);
