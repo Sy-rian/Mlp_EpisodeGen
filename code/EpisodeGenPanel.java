@@ -20,6 +20,7 @@ public class EpisodeGenPanel extends JPanel
 		episodeLabel = new JLabel ("Episode number: ");
 		seasonTextField = new JTextField(20);
 		episodeTextField = new JTextField(20);
+		genButton = new JButton("Generate Episode");
 		
 		/*if I wanted a "keep/skip" button, or a generate new button. I believe I would have to use a loop.
 		However, I think that the code for a gui like this is already a loop, so, idk*/
@@ -51,9 +52,16 @@ public class EpisodeGenPanel extends JPanel
 
 				int max1 = 9, min1 = 1; 
 				int max2 = 26, min2 = 1;
-
-				System.out.println("Season #: " + gen.nextInt(max1 - min1 + 1));
-				System.out.println("Episode #: " + gen.nextInt(max2 - min2 + 1));
+				//int season = gen.nextInt(max1 - min1) + 1;
+				int season = gen.nextInt(9)+1;
+				int episode = gen.nextInt(26)+1;
+				//int episode = gen.nextInt(max2 - min2) + 1;
+				
+				seasonTextField.setText(Integer.toString(season));
+				episodeTextField.setText(Integer.toString(episode));
+				
+				//System.out.println("Season #: " + );
+				//System.out.println("Episode #: " + );
 				
 				}//end of getSource
 			}//end of actionPerformed
